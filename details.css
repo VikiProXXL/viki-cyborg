@@ -1,0 +1,906 @@
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+::selection{
+    background: var(--pink);
+    color: white;
+}
+
+:root{
+    --black: #1f2122;
+    --grey: #27292a;
+    --text-grey: #666;
+    --pink: #ec6090;
+}
+
+.header{
+    height: 110px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.header-mg{
+    margin: auto;
+    width: 1294px;
+    display: flex;
+    align-items: center;
+    padding-top: 27px;
+}
+
+.logoBox{
+    flex-grow: .5;
+    height: auto;
+    border-right: 1px solid var(--grey);
+}
+
+.search{
+    flex-grow: .5;
+    display: flex;
+    height: 50px;
+    margin-left: 55px;
+    padding-left: 5px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+}
+.search img{
+    height: 43px;
+    width: 43px;
+}
+.search input{
+    font-size: 16px;
+    width: 170px;
+    border: none;
+    color: var(--text-grey);
+    background-color: var(--grey);
+}
+.search input:focus{
+    outline: none;
+    color: var(--text-grey);
+}
+.search:focus-within{
+    border: 2px solid white;
+    margin-left: 53px;
+}
+
+.nav{
+    display: flex;
+    flex-grow: 3;
+    justify-content: right;
+    align-items: center;
+}
+.nav a{
+    color: var(--text-grey);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 14px;
+}
+.nav a:hover{
+    color: var(--pink);
+}
+.nav .this{
+    color: var(--pink);
+}
+
+.profileBox{
+    display: flex;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+    transition: 500ms;
+}
+.profileBox:hover{
+    background-color: var(--pink);
+    cursor: pointer;
+}
+.profileBox p{
+    color: var(--text-grey);
+}
+.profileBox:hover p{
+    color: white;
+}
+.profileBox img{
+    height: 30px;
+    width: 30px;
+}
+
+.burger-nav{
+    display: none;
+}
+
+.burger{
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 9px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--pink);
+}
+
+/* Classes */
+.btnA{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    display: flex;
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    transition: 500ms;
+}
+.btn:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.btn:hover .btnTxt{
+    color: var(--pink);
+}
+.btnTxt{
+    margin: 0;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.border-btn{
+    display: flex;
+    height: 45px;
+    width: 150px;
+    align-self: center;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+    border: 1px solid var(--pink);
+}
+.border-btn a{
+    color: var(--pink);
+}
+.border-btn:hover{
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* Main */
+.main{
+    width: 100%;
+    background-color: var(--black);
+    height: auto;
+}
+
+.main-inner{
+    margin: auto;
+    padding: 60px 65px;
+    background-color: var(--grey);
+    height: auto;
+    width: 1150px;
+    border-radius: 25px;
+}
+
+.header-container{
+    display: flex;
+    gap: 30px;
+}
+.header-img{
+    height: 300px;
+    width: 370px;
+    border-radius: 20px;
+    background-image: url(assets/Fortnite-discover.png);
+    background-position: center;
+    background-size: cover;
+}
+.header-vid{
+    display: flex;
+    height: 300px;
+    flex-grow: 2;
+    border-radius: 20px;
+    background-image: url(assets/Fortnite-video-img.png);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn-link{
+    text-decoration: none;
+}
+.play-btn{
+    display: flex;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+.play-btn i{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#fort-head{
+    font-size: 45px;
+    margin: 60px 0 ;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    color: white;
+}
+
+.fort-details{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--black);
+}
+.stats-container{
+    display: flex;
+    gap: 20px;
+}
+.name-stats{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "name rating"
+                    "type download";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex-grow: 2;
+    padding: 30px 30px;
+    border-radius: 20px;
+    background-color: var(--grey);
+}
+.name-stats p{
+    color: white;
+    margin: 0;
+}
+#stats-name{
+    font-weight: bold;
+    grid-area: "name";
+}
+#stats-type{
+    font-weight: 300;
+    color: var(--text-grey);
+    grid-area: "type";
+}
+#stats-rating{
+    text-align: end;
+    grid-area: "rating";
+}
+#stats-download{
+    text-align: end;
+    grid-area: "download";
+}
+#stats-rating > i{
+    margin-right: 5px;
+}
+#stats-download > i{
+    margin-right: 5px;
+}
+.all-stats{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px 0px;
+    border-radius: 20px;
+    background-color: var(--grey);
+}
+.all-stats p{
+    color: white;
+    margin: 0;
+}
+
+.stat-cont{
+    display: grid;
+    grid-template-areas: "icon"
+                         "text";
+    gap: 10px;
+}
+.stat-cont > i{
+    grid-area: "icon";
+    margin: 0 auto;
+}
+.stat-cont > p{
+    grid-area: "text";
+}
+
+.fort-imgs-cont{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 25px;
+}
+.fort-img{
+    height: 280px;
+    width: 356px;
+    border-radius: 20px;
+    background-color: green;
+}
+#fort-img1{
+    background-image: url(assets/FortImg1.png);
+    background-position-x: -20px;
+    background-size: cover;
+}
+#fort-img2{
+    background-image: url(assets/FortCreative.png);
+    background-position: center;
+    background-size: cover;
+}
+#fort-img3{
+    background-image: url(assets/FortGameplay.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#fort-text{
+    color: var(--text-grey);
+    line-height: 30px;
+}
+#PayPal-link{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+#PayPal-link:hover{
+    color: rgb(236, 141, 141);
+}
+
+#fort-btn{
+    width: auto;
+}
+
+
+.related-games{
+    padding: 5px 20px;
+    padding-bottom: 30px;
+    margin-top: 60px;
+    border-radius: 20px;
+    background-color: var(--black);
+}
+.related-games h2{
+    padding-left: 10px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+.related-games h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+.related-games-cont{
+    display: grid;
+    grid-template-areas: "1 2"
+                         "3 4"
+                         "5 6";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.game-cont{
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid var(--grey);
+}
+.game-img{
+    height: 80px;
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: green;
+}
+.related-stats{
+    display: grid;
+    grid-template-areas: "name star"
+                         "type download";
+    width: 100%;
+}
+.related-stats p{
+    margin: 5px;
+}
+#favorite-star{
+    font-size: 14px;
+    text-align: right;
+}
+#related-type{
+    color: var(--text-grey);
+    font-weight: 300;
+    font-size: 15px;
+}
+#favorite-download{
+    font-size: 14px;
+    text-align: right;
+}
+
+#dota2{
+    background-image: url(assets/Dota.png);
+    background-position: center;
+    background-size: cover;
+}
+#pubg{
+    background-image: url(assets/Pubg.png);
+    background-position: center;
+    background-size: cover;
+}
+#brawl{
+    background-image: url(assets/Brawl.png);
+    background-position: center;
+    background-size: cover;
+}
+#minecraft{
+    background-image: url(assets/Mc.png);
+    background-position: center;
+    background-size: cover;
+}
+#cs2{
+    background-image: url(assets/Cs2.png);
+    background-position: center;
+    background-size: cover;
+}
+#warcraft{
+    background-image: url(assets/Warcraft.png);
+    background-position: center;
+    background-size: 150px;
+}
+/* Footer */
+#footer{
+    margin: 0;
+    padding: 40px 0;
+    background-color: var(--black);
+    text-align: center;
+}
+#footer p{
+    margin: 0;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1399px){
+    .main-inner{
+        width: 1000px;
+    }
+    .header-mg{
+        width: 1140px;
+    }
+
+    .popular-game{
+        padding-bottom: 10px;
+    }
+    .popular-game > img{
+        height: 140px;
+    }
+
+    .stats p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #popular-btn{
+        left: 390px;
+    }
+
+    #library-btn{
+        left: 390px;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .search input{
+        font-size: 14px;
+        width: 140px;
+    }
+    
+
+    .main-inner{
+        width: 800px;
+    }
+    .header-mg{
+        width: 935px;
+    }
+    .main-img{
+        background-position-y: -10px;
+    }
+
+    .fort-img{
+        height: 180px;
+    }
+
+    .popular-game{
+        padding-bottom: 10px;
+    }
+    .popular-game > img{
+        height: 120px;
+    }
+
+    .stats p{
+        line-height: 15px;
+        font-size: 13.5px;
+     }
+    .type{
+        margin-top: 5px;
+    }
+    .downloads{
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    #popular-btn{
+        left: 300px;
+    }
+
+    .stats-lib p{
+        font-size: 16px;
+    }
+    #library-btn{
+        left: 300px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .header{
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(245, 245, 245);
+    }
+    .header-mg{
+        width: 96%;
+    }
+    .logoBox{
+        border-right: none;
+    }
+    .search{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+
+
+    .burger-nav{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        width: 96%;
+        height: auto;
+        top: -180px;
+        left: 20px;
+        transition: 300ms;
+        background-color: white;
+    }
+    .burger-nav.active{
+        top: 110px;
+    }
+    .nav-line{
+        display: flex;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgb(231, 231, 231);
+    }
+    .profile-box{
+        display: flex;
+        height: 55px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-box{
+        border-radius: 28px;
+    }
+    .nav-txt{
+        color: black;
+        text-decoration: none;
+    }
+    .profile-box.burger-this{
+        color: white;
+        background-color: var(--pink);
+    }
+    .profile-box.burger-this > .nav-txt{
+        color: white;
+    }
+    .nav-txt.burger-this{
+        color: var(--pink);
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(12px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .main{
+        padding-top: 140px;
+    }
+    #popular-btn{
+        z-index: 0;
+    }
+
+    .library-game{
+        display: grid;
+        grid-template-areas: "pic name"
+                             "pic type"
+                             "added played"
+                             "date hours"
+                             "currently btn"
+                             "state btn";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+@media only screen and (max-width: 991px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+
+    .main-inner{
+        width: 580px;
+    }
+
+    .main-img{
+        background-position-y: -0px;
+        background-position-x: -40px;
+    }
+
+    .header-container{
+        display: grid;
+    }
+    .header-img{
+        height: 480px;
+        width: 580px;
+    }
+
+    .stats-container{
+        display: grid;
+    }
+
+    .fort-imgs-cont{
+        display: grid;
+    }
+    .fort-img{
+        width: 520px;
+        height: 380px;
+    }
+    #fort-img1{
+        background-position-x: 0;
+    }
+
+    .related-games-cont{
+        display: block;
+    }
+
+    .game-img{
+        height: 90px;
+        width: 110px;
+    }
+
+    #popular-btn{
+        left: 180px;
+    }
+    #library-btn{
+        left: 180px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+    .main-inner{
+        width: 470px;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+
+    .main-img h3{
+        text-align: center;
+    }
+    .main-img p{
+        text-align: center;
+    }
+    .main-img .btn{
+        margin: 0 auto;
+    }
+
+    .header-img{
+        height: 360px;
+        width: 470px;
+    }
+    .header-vid{
+        height: 220px;
+    }
+
+    .all-stats{
+        gap: 50px;
+    }
+
+    .fort-img{
+        width: 410px;
+        height: 280px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .burger-nav{
+        width: 97vw;
+        left: 1.5vw;
+    }
+
+    .main-inner{
+        width: 86%;
+        padding: 30px;
+    }
+
+    .main-img{
+        padding: 13%;
+    }
+
+    .header-img{
+        width: 86vw;
+        height: 380px;
+    }
+    .header-vid{
+        width: 86vw;
+        height: 40vw;
+    }
+
+    .fort-img{
+        width: 76vw;
+        height: 53vw;
+    }
+}
+
+@media only screen and (max-width: 495px){
+    .main-inner{
+        width: 84%;
+    }
+
+    .fort-img{
+        width: 72vw;
+        height: 53vw;
+    }
+
+    #popular-btn{
+        left: 25%;
+    }
+    #library-btn{
+        left: 25%;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    .library-game{
+        column-gap: 35px;
+        padding: 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .main-img{
+        height: 320px;
+    }
+
+    .all-stats{
+        gap: 10vw;
+    }
+    .stat-cont > i{
+        font-size: 4vw;
+    }
+    .stat-cont > p{
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 435px){
+    .main-inner{
+        width: 80%;
+    }
+    
+    .main-img{
+        height: 270px;
+    }
+    .main-img h3{
+        font-size: 16px;
+    }
+    .main-img > p{
+        font-size: 30px;
+    }
+
+    .header-img{
+        width: 80vw;
+    }
+    .header-vid{
+        width: 80vw;
+    }
+
+    .fort-img{
+        width: 66vw;
+        height: 42vw;
+    }
+
+}
+
+@media only screen and (max-width: 415px){
+    #popular-btn{
+        left: 17%;
+    }
+    #library-btn{
+        left: 17%;
+    }
+}
+
+@media only screen and (max-width: 396px){
+    #library{
+        padding: 5px 10px;
+    }
+    .library-game{
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 383px){
+    #popular-btn{
+        left: 13%;
+    }
+    #library-btn{
+        left: 13%;
+    }
+}
+
+@media only screen and (max-width: 346px){
+    .library-game p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 341px){
+    .main-inner{
+        width: 76%;
+    }
+
+    .fort-img{
+        width: 58vw;
+        height: 36vw;
+    }
+
+}
+
+@media only screen and (max-width : 327px){
+    .main-img{
+        height: 290px;
+    }
+}

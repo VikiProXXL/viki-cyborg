@@ -1,0 +1,1572 @@
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+::selection{
+    background: var(--pink);
+    color: white;
+}
+
+:root{
+    --black: #1f2122;
+    --grey: #27292a;
+    --text-grey: #666;
+    --pink: #ec6090;
+}
+
+.header{
+    height: 110px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.header-mg{
+    margin: auto;
+    width: 1294px;
+    display: flex;
+    align-items: center;
+    padding-top: 27px;
+}
+
+.logoBox{
+    flex-grow: .5;
+    height: auto;
+    border-right: 1px solid var(--grey);
+}
+
+.search{
+    flex-grow: .5;
+    display: flex;
+    height: 50px;
+    margin-left: 55px;
+    padding-left: 5px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+}
+.search img{
+    height: 43px;
+    width: 43px;
+}
+.search input{
+    font-size: 16px;
+    width: 170px;
+    border: none;
+    color: var(--text-grey);
+    background-color: var(--grey);
+}
+.search input:focus{
+    outline: none;
+    color: var(--text-grey);
+}
+.search:focus-within{
+    border: 2px solid white;
+    margin-left: 53px;
+}
+
+.nav{
+    display: flex;
+    flex-grow: 3;
+    justify-content: right;
+    align-items: center;
+}
+.nav a{
+    color: var(--text-grey);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 14px;
+}
+.nav a:hover{
+    color: var(--pink);
+}
+.nav .this{
+    color: var(--pink);
+}
+
+.profileBox{
+    display: flex;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+    transition: 500ms;
+}
+.profileBox:hover{
+    background-color: var(--pink);
+    cursor: pointer;
+}
+.profileBox p{
+    color: var(--text-grey);
+}
+.profileBox:hover p{
+    color: white;
+}
+.profileBox img{
+    height: 30px;
+    width: 30px;
+}
+
+.burger-nav{
+    display: none;
+}
+
+.burger{
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 9px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--pink);
+}
+
+/* Classes */
+.btnA{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    display: flex;
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    transition: 500ms;
+}
+.btn:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.btn:hover .btnTxt{
+    color: var(--pink);
+}
+.btnTxt{
+    margin: 0;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+/* Main */
+.main{
+    width: 100%;
+    background-color: var(--black);
+    height: auto;
+}
+
+.main-inner{
+    margin: auto;
+    padding: 60px 65px;
+    background-color: var(--grey);
+    height: auto;
+    width: 1150px;
+    border-radius: 25px;
+}
+    /*
+    margin: 0 298px;
+    padding: 60px 65px;
+    background-color: var(--grey);
+    height: auto;
+    border-radius: 25px;
+    */
+
+.feat-top-box{
+    display: flex;
+    gap: 20px;
+}
+
+#featured{
+    flex-grow: 4;
+    padding: 0 20px;
+    background-color: var(--black);
+    border-radius: 20px;
+}
+#controler{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#controler h2{
+    padding-left: 10px;
+    margin-right: auto;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#controler h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+#controler img{
+    height: 20px;
+    width: 10px;
+    margin: 5px;
+}
+
+.controls{
+    display: flex;
+    gap: 6px;
+}
+
+#arrowL{
+    cursor: pointer;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+   /* height: auto;
+    width: auto;*/
+}
+#arrowL > img{
+    margin: 0;
+}
+#arrowL > i{
+    margin: 0;
+}
+#arrowR{
+    cursor: pointer;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+    /*height: auto;
+    width: auto;*/
+}
+#arrowR > img{
+    margin: 0;
+}
+#arrowR > i{
+    margin: 0;
+}
+.arrowG{
+    display: block;
+}
+.arrowP{
+    display: none;
+}
+/*#arrowL:hover > #arrowLG{
+    display: none;
+}
+#arrowL:hover > #arrowLP{
+    display: block;
+}
+
+#arrowR:hover > #arrowRG{
+    display: none;
+}
+#arrowR:hover > #arrowRP{
+    display: block;
+}*/
+
+#iconL{
+    color: #666;
+}
+#arrowL:hover > #iconL{
+    color: var(--pink);
+}
+#iconR{
+    color: #666;
+}
+#arrowR:hover > #iconR{
+    color: var(--pink);
+}
+
+.slider-container{
+    overflow: hidden;
+    width: 780px;
+}
+
+.slider{
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+.slider.active {
+    cursor: grabbing;
+}
+.slider.dragging .fav-game{
+    cursor: grabbing;
+}
+.fav-game{
+    width: 33%;
+    flex-basis: 33%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fav-pic{
+    height: 370px;
+    width: 230px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.fav-pic:hover > .pic-div{
+    top: 86%;
+}
+.pic-div{
+    display: flex;
+    position: relative;
+    background-color: #1d1d1df3;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    top: 105%;
+    border-radius: 20px;
+    width: 70%;
+    height: 35px;
+    transition: 400ms;
+}
+.pic-div p{
+    margin: 0;
+    color: var(--pink);
+}
+
+#fav-game1  .fav-pic{
+    background-image: url(assets/Pubg.png);
+}
+#first-clone  .fav-pic{
+    background-image: url(assets/Pubg.png);
+}
+#fav-game2  .fav-pic{
+    background-image: url(assets/Mc.png);
+}
+#fav-game3  .fav-pic{
+    background-image: url(assets/Cs2.png);
+    background-position-x: -140px;
+}
+#fav-game4  .fav-pic{
+    background-image: url(assets/Dota.png);
+}
+#fav-game5  .fav-pic{
+    background-image: url(assets/Fort.png);
+    background-position-x: 0px;
+}
+#last-clone  .fav-pic{
+    background-image: url(assets/Fort.png);
+    background-position-x: 0px;
+}
+
+.stats{
+    display: grid;
+    grid-template-areas: "name rating",
+                    "downs downloads";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr  1fr;
+}
+.stats p{
+   margin: 0;
+   margin-top: 10px;
+   line-height: 10px;
+}
+
+.rating > img,
+.downloads > img{
+    height: 20px;
+    width: 20px;
+}
+.name{
+    grid-area: "name";
+    font-weight: 600;
+    color: white;
+}
+.rating{
+    grid-area: "rating";
+    text-align: end;
+    color: white;
+}
+.downs{
+    grid-area: "downs";
+    color: var(--text-grey);
+}
+.downloads{
+    grid-area: "downloads";
+    text-align: end;
+    color: white;
+}
+
+#top-games{
+    flex-grow: 1;
+    padding: 0 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: var(--black);
+    border-radius: 20px;
+}
+#top-games h2{
+    padding-left: 10px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#top-games h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.top-game{
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--grey);
+    margin-top: 20px;
+}
+.top-game p{
+    display: flex;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+}
+
+.top-name{
+    font-weight: 900;
+}
+.top-game .top-type{
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+.top-game > img{
+    height: 90px;
+    width: 90px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.top-stats{
+    text-align: start;
+}
+
+.top-rating{
+    display: flex;
+    height: auto;
+    align-items: center;
+}
+.top-rating > div > p > img{
+    height: 15px;
+    width: 15px;
+}
+
+.down-btn{
+    display: flex;
+    background-color: var(--grey);
+    height: 15px;
+    width: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.down-btn img{
+    height: 15px;
+    width: 15px;
+}
+
+#mc{
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#view-all-games{
+    margin: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--pink);
+    text-decoration: none;
+}
+
+#stream-start{
+    text-align: center;
+}
+#stream-start h2{
+    padding-left: 10px;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#stream-start h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+#stream-tot{
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+.tot-step{
+    flex-grow: 1;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--text-grey);
+}
+.stream-icon{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+.stream-icon > img{
+    height: 40px;
+    width: 40px;
+}
+.tot-step > .step-head{
+    font-size: 20px;
+    text-align: start;
+    color: white;
+}
+.tot-step > .step-txt{
+    color: var(--text-grey);
+    text-align: start;
+}
+
+#stream-tot-btn{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#streams{
+    padding: 30px 30px;
+    padding-bottom: 0px;
+    margin-top: 70px;
+    border-radius: 20px;
+    background-color: var(--black);
+}
+#streams h2{
+    padding-left: 10px;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#streams h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+#streams-box{
+    display: flex;
+    gap: 20px;
+}
+.stream-pic{
+    position: relative;
+    height: 240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.stream-pic .stream-btn{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    height: 30px;
+    width: 85px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    opacity: 0%;
+    transition: 300ms;
+}
+.stream-pic .stream-btn-live{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    height: 30px;
+    width: 50px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    opacity: 0%;
+    transition: 300ms;
+}
+.stream-pic .stream-btn:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.stream-pic .stream-btn-live:hover{
+    cursor: pointer;
+}
+
+.stream-pic:hover .stream-btn{
+    opacity: 100%;
+}
+.stream-pic:hover .stream-btn-live{
+    opacity: 100%;
+}
+
+.stream-btn > img{
+    height: 30px;
+    width: 25px;
+}
+
+.live{
+    left: 180px;
+    top: 5px;
+}
+.views{
+    top: 180px;
+    left: 30px;
+}
+.stream-game{
+    top: 150px;
+    left: 130px;
+}
+
+.stream-about{
+    display: grid;
+    grid-template:  "pfp name"
+                    "pfp header";
+    grid-template-columns: 60px 1fr;
+    grid-row: 1fr 1fr;
+}
+.stream-pfp{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    grid-area: pfp;
+}
+.streamer-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    grid-area: name;
+}
+.streamer-name p{
+    margin: 0;
+    color: var(--pink);
+    font-size: 15px;
+}
+.stream-head{
+    grid-area: header;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.streamer-name img{
+    height: 20px;
+    width: 20px;
+}
+
+
+#stream1{
+    background-image: url(assets/PUBGgameplay.png);
+    background-size: cover;
+}
+#stream2{
+    background-image: url(assets/DotaGameplay.png);
+    background-size: cover;
+}
+#stream3{
+    background-image: url(assets/CSgameplay.png);
+    background-size: cover;
+}
+#stream4{
+    background-image: url(assets/WOWgameplay.png);
+    background-size: cover;
+}
+
+#streams-btn{
+    position: relative;
+    top: 25px;
+    left: 450px;
+    width: 170px;
+    padding: 3px 20px;
+}
+
+/* Footer */
+#footer{
+    margin: 0;
+    padding: 40px 0;
+    background-color: var(--black);
+    text-align: center;
+}
+#footer p{
+    margin: 0;
+    color: white;
+}
+
+
+
+
+
+@media only screen and (max-width: 1399px){
+    .main-inner{
+        width: 1000px;
+    }
+    .header-mg{
+        width: 1140px;
+    }
+
+    .slider-container{
+        width: 630px;
+    }
+
+    #featured{
+        height: 520px;
+    }
+    .slider{
+        gap: 30px;
+    }
+    .fav-pic{
+        width: 190px;
+        height: 310px;
+    }
+
+    #top-games h2{
+        text-align: left;
+    }
+    .top-game > img{
+        height: 80px;
+        width: 80px;
+    }
+
+    .stream-pic{
+        height: 200px;
+        width: 200px;
+    }
+
+    .live{
+        left: 150px;
+    }
+    .views{
+        top: 140px;
+        left: 10px;
+    }
+    .stream-game{
+        top: 110px;
+        left: 110px;
+    }
+
+    #streams-btn{
+        left: 390px;;
+    }
+    
+
+}
+@media only screen and (max-width: 1199px){
+    .search input{
+        font-size: 14px;
+        width: 140px;
+    }
+    
+
+    .main-inner{
+        width: 800px;
+        padding-left: 30px;
+    }
+    .header-mg{
+        width: 935px;
+    }
+
+    .slider-container{
+        width: 500px;
+    }
+    .fav-pic{
+        width: 220px;
+        height: 380px;
+    }
+
+    #featured{
+        height: 570px;
+    }
+    .slider{
+        gap: 30px;
+    }
+
+    .fav-game{
+        width: 100%;
+    }
+
+    .top-rating{
+        display: block;
+    }
+    #stream-tot{
+        margin-left: 30px;
+    }
+
+    .stream-pic{
+        width: 150px;
+        height: 150px;
+    }
+    .stream-head{
+        font-size: 22px;
+    }
+
+    .live{
+        left: 100px;
+    }
+    .views{
+        top: 55px;
+        left: 35px;
+    }
+    .stream-game{
+        top: 60px;
+        left: 35px;
+    }
+
+    #streams-btn{
+        left: 300px;;
+    }
+    
+}
+@media only screen and (max-width: 992px){
+    .header{
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(245, 245, 245);
+    }
+    .header-mg{
+        width: 96%;
+    }
+    .logoBox{
+        border-right: none;
+    }
+    .search{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+
+
+    .burger-nav{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        width: 96%;
+        height: auto;
+        top: -180px;
+        left: 20px;
+        transition: 300ms;
+        background-color: white;
+    }
+    .burger-nav.active{
+        top: 110px;
+    }
+    .nav-line{
+        display: flex;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgb(231, 231, 231);
+    }
+    .profile-box{
+        display: flex;
+        height: 55px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-box{
+        border-radius: 28px;
+    }
+    .nav-txt{
+        color: black;
+        text-decoration: none;
+    }
+    .profile-box.burger-this{
+        color: white;
+        background-color: var(--pink);
+    }
+    .profile-box.burger-this > .nav-txt{
+        color: white;
+    }
+    .nav-txt.burger-this{
+        color: var(--pink);
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(12px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .header-mg{
+        width: 96%;
+    }
+
+    .main{
+        padding-top: 140px;
+    }
+    .main-inner{
+        padding: 60px 65px;
+        padding-left: 10px;
+    }
+   
+    .feat-top-box{
+        gap: 10px;
+    }
+
+    .slider-container{
+        width: 520px;
+    }
+    .fav-pic{
+        width: 243px;
+    }
+
+    #top-games{
+        padding-top: 20px;
+    }
+    #top-games h2{
+        margin-top: 0px;
+    }
+    .top-rating{
+        display: block;
+    }
+
+    #stream-tot{
+        margin-left: 40px;
+    }
+
+    
+
+    /*#streams-box{
+        display: grid;
+        grid-template-areas: "pubg dota"
+                             "cs wow";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .stream-pic{
+        width: 235px;
+        height: 235px;
+    }*/
+}
+@media only screen and (max-width: 991px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+
+    .main-inner{
+        width: 580px;
+        padding: 60px 65px;
+    }
+
+    .main-img{
+        background-position-y: -0px;
+        background-position-x: -40px;
+    }
+
+    .slider-container{
+        width: 540px;
+    }
+    .feat-top-box{
+        display: grid;
+        gap: 30px;
+    }
+    .slider{
+        gap: 40px;
+    }
+    .fav-pic{
+        width: 240px;
+    }
+
+    .top-rating{
+        display: flex;
+    }
+
+    #stream-tot{
+        display: grid;
+        gap: 30px;
+    }
+
+    #popular-games-box{
+        display: grid;
+        gap: 25px;
+        grid-template-areas: "fort pubg"
+                             " dota cs"
+                             "mc brawl"
+                             "warfr wow";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .popular-game > img{
+        height: 170px;
+    }
+    .stats p{
+        font-size: 16px;
+    }
+
+    #streams-box{
+        display: grid;
+        grid-template-areas: "pubg dota"
+                             "cs wow";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .stream-pic{
+        width: 235px;
+        height: 235px;
+    }
+
+    .live{
+        left: 180px;
+    }
+    .views{
+        top: 160px;
+        left: 35px;
+    }
+    .stream-game{
+        top: 130px;
+        left: 130px;
+    }
+
+    #streams-btn{
+        left: 180px;;
+    }
+}
+@media only screen and (max-width: 767px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+    .main-inner{
+        width: 470px;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+
+    .main-img h3{
+        text-align: center;
+    }
+    .main-img p{
+        text-align: center;
+    }
+    .main-img .btn{
+        margin: 0 auto;
+    }
+
+    .slider-container{
+        width: 430px;
+    }
+    .fav-pic{
+        width: 190px;
+    }
+
+    .popular-game > img{
+        height: 120px;
+    }
+    .stats p{
+        font-size: 14px;
+    }
+
+    .library-game{
+        display: grid;
+        grid-template-areas: "pic pic"
+                             "name added"
+                             "type date"
+                             "played currently"
+                             "hours state"
+                             "btn btn";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr;
+        padding: 0 40px;
+        padding-top: 20px;
+    }
+    .library-game p{
+        margin: 0 auto;
+    }
+    .img-lib{
+        margin: 0 auto;
+    }
+    .lib-btn{
+        margin: 0 auto;
+    }
+
+
+    #most-popular h2{
+        font-size: 25px;
+    }
+    #library h2{
+        font-size: 25px;
+    }
+
+    .live{
+        left: 120px;
+    }
+    .views{
+        top: 110px;
+        left: 0px;
+    }
+    .stream-game{
+        top: 80px;
+        left: 90px;
+    }
+
+    .stream-pic{
+        width: 175px;
+        height: 175px;
+    }
+    #streams-btn{
+        left: 120px;;
+    }
+}
+@media only screen and (max-width: 575px){
+    .burger-nav{
+        width: 97vw;
+        left: 1.5vw;
+    }
+
+    .main-inner{
+        width: 86%;
+        padding: 30px;
+    }
+
+    .main-img{
+        padding: 13%;
+    }
+
+    #featured{
+        height: 890px;
+    }
+    .fav-pic{
+        width: 430px;
+        height: 700px;
+    }
+
+    #stream-tot{
+        margin-left: 0;
+    }
+
+    #popular-games-box{
+        display: block;
+        
+    }
+    .popular-game > img{
+        height: 50%;
+    }
+
+    .live{
+        left: 310px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 280px;
+        left: 250px;
+    }
+    .views{
+        top: 310px;
+        left: 90px;
+    }
+
+    #streams-box{
+        display: block;
+    }
+    .stream-pic{
+        width: 72vw;
+        height: 72vw;
+    }
+    #streams-btn{
+        left: 30%;;
+    }
+
+    .popular-game{
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+    .stats p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 533px){
+    #featured{
+        height: 800px;
+    }
+    .slider-container{
+        width: 390px;
+    }
+    .fav-pic{
+        width: 390px;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 515px){
+    .live{
+        left: 270px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 240px;
+        left: 220px;
+    }
+    .views{
+        top: 270px;
+        left: 90px;
+    }
+}
+
+
+@media only screen and (max-width: 495px){
+    .main-inner{
+        width: 84%;
+    }
+
+    #featured{
+        height: 770px;
+    }
+    .slider-container{
+        width: 340px;
+    }
+    .fav-pic{
+        width: 340px;
+        height: 580px;
+    }
+
+    .stream-pic{
+        width: 67vw;
+        height: 67vw;
+    }
+
+    .live{
+        left: 240px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 200px;
+        left: 190px;
+    }
+    .views{
+        top: 230px;
+        left: 60px;
+    }
+
+    #streams-btn{
+        left: 25%;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    .library-game{
+        column-gap: 35px;
+        padding: 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .main-img{
+        height: 320px;
+    }
+
+    #featured{
+        height: 660px;
+    }
+
+    #controler h2{
+        font-size: 25px;
+    }
+
+    .slider-container{
+        width: 300px;
+    }
+    .fav-pic{
+        width: 300px;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 435px){
+    .main-inner{
+        width: 80%;
+    }
+    
+    .main-img{
+        height: 270px;
+    }
+    .main-img h3{
+        font-size: 16px;
+    }
+    .main-img > p{
+        font-size: 30px;
+    }
+
+    .library-game{
+        column-gap: 25px;
+        padding: 20px 10px;
+    }
+    .library-game p {
+        font-size: 15px;
+    }
+
+    .stream-pic{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .live{
+        left: 170px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 130px;
+        left: 140px;
+    }
+    .views{
+        top: 160px;
+        left: 30px;
+    }
+
+    #streams-btn{
+        left: 20%;
+    }
+}
+
+@media only screen and (max-width: 431px){
+    .live{
+        left: 170px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 140px;
+        left: 130px;
+    }
+    .views{
+        top: 170px;
+        left: 20px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    #featured{
+        width: 260px;
+    }
+
+    #featured{
+        height: 620px;
+    }
+    .slider-wrapper{
+        width: 240px;
+    }
+    #controler h2{
+        margin-right: 0;
+    }
+
+    .slider-container{
+        width: 240px;
+    }
+    .fav-pic{
+        width: 240px;
+        height: 460px;
+    }
+
+    #streams-btn{
+        left: 17%;
+    }
+}
+
+@media only screen and (max-width: 396px){
+    #library{
+        padding: 5px 10px;
+    }
+    .library-game{
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 387px){
+    .top-game > img{
+        height: 70px;
+        width: 70px;
+    }
+    .top-game p{
+        font-size: 13px;
+    }
+
+    .down-btn{
+        width: 10px;
+        height: 10px;
+    }
+    .down-btn img{
+        height: 13px;
+        width: 13px;
+    }
+}
+
+@media only screen and (max-width: 377px){
+    .live{
+        left: 140px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 110px;
+        left: 110px;
+    }
+    .views{
+        top: 140px;
+        left: 20px;
+    }
+}
+
+@media only screen and (max-width: 357px){
+    #featured{
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 383px){
+    #streams-btn{
+        left: 13%;
+    }
+}
+
+@media only screen and (max-width: 346px){
+    .library-game p{
+        font-size: 14px;
+    }
+
+    #streams-btn{
+        left: 2%;
+    }
+}
+
+@media only screen and (max-width: 342px){
+    #streams h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 341px){
+    .main-inner{
+        width: 76%;
+    }
+
+    #featured{
+        width: 200px;
+        height: 450px;
+    }
+    #controler h2{
+        font-size: 20px;
+    }
+    .slider-wrapper{
+        width: 200px;
+    }
+    .slider-container{
+        width: 200px;
+    }
+    .fav-pic{
+        width: 200px;
+        height: 300px;
+    }
+
+    #top-games h2{
+        font-size: 20px;
+    }
+    .top-game{
+        display: grid;
+    }
+    .top-game p{
+        font-size: 15px;
+    }
+    .down-btn{
+        margin-right: auto;
+        margin-left: 15px;
+    }
+
+    .stream-pic{
+        width: 53vw;
+        height: 53vw;
+    }
+
+    .library-game p{
+        text-align: center;
+    }
+
+    .live{
+        left: 100px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 70px;
+        left: 100px;
+    }
+    .views{
+        top: 100px;
+        left: 0px;
+    }
+
+    #streams-btn{
+        left: 2%;
+    }
+}
+
+@media only screen and (max-width: 336px){
+    .live{
+        left: 100px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 80px;
+        left: 50px;
+    }
+    .views{
+        top: 70px;
+        left: 50px;
+    }
+}
+
+
+@media only screen and (max-width : 327px){
+    .main-img{
+        height: 290px;
+    }
+
+    #streams-btn{
+        left: 0%;
+    }
+}

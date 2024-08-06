@@ -1,0 +1,1799 @@
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+::selection{
+    background: var(--pink);
+    color: white;
+}
+
+:root{
+    --black: #1f2122;
+    --grey: #27292a;
+    --text-grey: #666;
+    --pink: #ec6090;
+}
+
+.header{
+    height: 110px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.header-mg{
+    margin: auto;
+    width: 1294px;
+    display: flex;
+    align-items: center;
+    padding-top: 27px;
+}
+
+.logoBox{
+    flex-grow: .5;
+    height: auto;
+    border-right: 1px solid var(--grey);
+}
+
+.search{
+    flex-grow: .5;
+    display: flex;
+    height: 50px;
+    margin-left: 55px;
+    padding-left: 5px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+}
+.search img{
+    height: 43px;
+    width: 43px;
+}
+.search input{
+    font-size: 16px;
+    width: 170px;
+    border: none;
+    color: var(--text-grey);
+    background-color: var(--grey);
+}
+.search input:focus{
+    outline: none;
+    color: var(--text-grey);
+}
+.search:focus-within{
+    border: 2px solid white;
+    margin-left: 53px;
+}
+
+.nav{
+    display: flex;
+    flex-grow: 3;
+    justify-content: right;
+    align-items: center;
+}
+.nav a{
+    color: var(--text-grey);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 14px;
+}
+.nav a:hover{
+    color: var(--pink);
+}
+.nav .this{
+    color: var(--pink);
+}
+
+.profileBox{
+    display: flex;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: var(--grey);
+    transition: 500ms;
+}
+.profileBox:hover{
+    background-color: var(--pink);
+    cursor: pointer;
+}
+.profileBox p{
+    color: var(--text-grey);
+}
+.profileBox:hover p{
+    color: white;
+}
+.profileBox img{
+    height: 30px;
+    width: 30px;
+}
+
+.burger-nav{
+    display: none;
+}
+
+.burger{
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 9px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--pink);
+}
+
+/* Classes */
+.btnA{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    display: flex;
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    transition: 500ms;
+}
+.btn:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.btn:hover .btnTxt{
+    color: var(--pink);
+}
+.btnTxt{
+    margin: 0;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.border-btn{
+    display: flex;
+    height: 45px;
+    width: 150px;
+    align-self: center;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+    border: 1px solid var(--pink);
+}
+.border-btn a{
+    color: var(--pink);
+}
+.border-btn:hover{
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* Main */
+.main{
+    width: 100%;
+    background-color: var(--black);
+    height: auto;
+}
+
+.main-inner{
+    margin: auto;
+    padding: 60px 65px;
+    background-color: var(--grey);
+    height: auto;
+    width: 1150px;
+    border-radius: 25px;
+}
+
+.streams-top-box{
+    display: flex;
+    gap: 20px;
+}
+
+#streams{
+    flex-grow: 4;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    background-color: var(--black);
+    border-radius: 20px;
+}
+#controler{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#controler h2{
+    padding-left: 10px;
+    margin-right: auto;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#controler h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+#controler img{
+    height: 20px;
+    width: 10px;
+    margin: 5px;
+}
+
+.controls{
+    display: flex;
+    gap: 6px;
+}
+
+#arrowL{
+    cursor: pointer;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+   /* height: auto;
+    width: auto;*/
+}
+#arrowL > img{
+    margin: 0;
+}
+#arrowL > i{
+    margin: 0;
+}
+#arrowR{
+    cursor: pointer;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+    /*height: auto;
+    width: auto;*/
+}
+#arrowR > img{
+    margin: 0;
+}
+#arrowR > i{
+    margin: 0;
+}
+.arrowG{
+    display: block;
+}
+.arrowP{
+    display: none;
+}
+/*#arrowL:hover > #arrowLG{
+    display: none;
+}
+#arrowL:hover > #arrowLP{
+    display: block;
+}
+
+#arrowR:hover > #arrowRG{
+    display: none;
+}
+#arrowR:hover > #arrowRP{
+    display: block;
+}*/
+
+#iconL{
+    color: #666;
+}
+#arrowL:hover > #iconL{
+    color: var(--pink);
+}
+#iconR{
+    color: #666;
+}
+#arrowR:hover > #iconR{
+    color: var(--pink);
+}
+
+.slider-container{
+    overflow: hidden;
+    width: 780px;
+}
+
+.slider{
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+.slider.active {
+    cursor: grabbing;
+}
+.slider.dragging .fav-game{
+    cursor: grabbing;
+}
+.fav-game{
+    width: 33%;
+    flex-basis: 33%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fav-pic{
+    height: 370px;
+    width: 230px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.fav-pic:hover > .pic-div{
+    top: 86%;
+}
+.pic-div{
+    display: flex;
+    position: relative;
+    background-color: #1d1d1df3;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    top: 105%;
+    border-radius: 20px;
+    width: 70%;
+    height: 35px;
+    transition: 400ms;
+}
+.pic-div p{
+    margin: 0;
+    color: var(--pink);
+}
+
+#fav-game1  .fav-pic{
+    background-image: url(assets/PUBGgameplay.png);
+}
+#first-clone  .fav-pic{
+    background-image: url(assets/PUBGgameplay.png);
+}
+#fav-game2  .fav-pic{
+    background-image: url(assets/Mcgameplay.png);
+}
+#fav-game3  .fav-pic{
+    background-image: url(assets/CSgameplay.png);
+    background-position-x: -140px;
+}
+#fav-game4  .fav-pic{
+    background-image: url(assets/DotaGameplay.png);
+}
+#fav-game5  .fav-pic{
+    background-image: url(assets/FortStreamGameplay.png);
+    background-position-x: 0px;
+}
+#last-clone  .fav-pic{
+    background-image: url(assets/FortStreamGameplay.png );
+    background-position-x: 0px;
+}
+
+.stats{
+    display: grid;
+    grid-template-areas: "name rating",
+                    "downs downloads";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr  1fr;
+}
+.stats p{
+   margin: 0;
+   margin-top: 10px;
+   line-height: 10px;
+}
+
+.rating > img,
+.downloads > img{
+    height: 20px;
+    width: 20px;
+}
+.name{
+    grid-area: "name";
+    font-weight: 600;
+    color: white;
+}
+.rating{
+    grid-area: "rating";
+    text-align: end;
+    color: white;
+}
+.downs{
+    grid-area: "downs";
+    color: var(--text-grey);
+}
+.downloads{
+    grid-area: "downloads";
+    text-align: end;
+    color: white;
+}
+
+#top-games{
+    flex-grow: 2;
+    width: 400px;
+    padding: 0 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: var(--black);
+    border-radius: 20px;
+}
+#top-games h2{
+    text-align: start;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+#top-games h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.top-game{
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--grey);
+    margin-top: 20px;
+}
+.top-game p{
+    margin: 10px;
+}
+.num{
+    font-weight: bold;
+    color: white;
+}
+.stream-pfp{
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.checkmark{
+    height: 20px;
+    width: 20px;
+}
+.streamer-name{
+    font-size: 14px;
+    color: var(--pink);
+}
+#follow-btn{
+    display: flex;
+    height: 35px;
+    width: 85px;
+    margin-left: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    transition: 500ms;
+}
+#follow-btn:hover{
+    background-color: white;
+    cursor: pointer;
+}
+#follow-btn:hover .btnTxt{
+    color: var(--pink);
+}
+.btnTxt{
+    margin: 0;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+/* Streams */
+.popular-streams{
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 30px 20px;
+    padding-bottom: 0;
+    background-color: var(--black);
+}
+.popular-streams h2{
+    padding-left: 10px;
+    margin: 0;
+    margin-right: auto;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-style: bold;
+    color: var(--pink);
+}
+.popular-streams h2 em{
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.popular-streams-cont{
+    display: grid;
+    grid-template-areas: "1 2 3 4"
+                         "5 6 7 8";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding-top: 30px;
+}
+.stream-pic{
+    position: relative;
+    height: 240px;
+    width: 240px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.stream-pic .stream-btn{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    height: 30px;
+    width: 85px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    opacity: 0%;
+    transition: 300ms;
+}
+.stream-pic .stream-btn-live{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    height: 30px;
+    width: 50px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    opacity: 0%;
+    transition: 300ms;
+}
+.stream-pic .stream-btn:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+.stream-pic .stream-btn-live:hover{
+    cursor: pointer;
+}
+
+.stream-pic:hover .stream-btn{
+    opacity: 100%;
+}
+.stream-pic:hover .stream-btn-live{
+    opacity: 100%;
+}
+
+.stream-btn > img{
+    height: 30px;
+    width: 25px;
+}
+
+.live{
+    left: 180px;
+    top: 5px;
+}
+.views{
+    top: 180px;
+    left: 30px;
+}
+.stream-game{
+    top: 150px;
+    left: 130px;
+}
+
+.stream-about{
+    display: grid;
+    grid-template:  "pic name"
+                    "pic header";
+    grid-template-columns: 60px 1fr;
+    grid-row: 1fr 1fr;
+}
+.stream-pfp{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    grid-area: pic;
+}
+.streamer-name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    grid-area: name;
+}
+.streamer-name p{
+    margin: 0;
+    color: var(--pink);
+    font-size: 15px;
+}
+.stream-head{
+    grid-area: header;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.streamer-name img{
+    height: 20px;
+    width: 20px;
+}
+
+
+#stream1{
+    background-image: url(assets/PUBGgameplay.png);
+    background-size: cover;
+}
+#stream2{
+    background-image: url(assets/DotaGameplay.png);
+    background-size: cover;
+}
+#stream3{
+    background-image: url(assets/CSgameplay.png);
+    background-size: cover;
+}
+#stream4{
+    background-image: url(assets/WOWgameplay.png);
+    background-size: cover;
+}
+#stream5{
+    background-image: url(assets/BrawlGameplay.png);
+    background-size: cover;
+    background-position: center;
+}
+#stream6{
+    background-image: url(assets/Mcgameplay.png);
+    background-size: cover;
+    background-position: center;
+}
+#stream7{
+    background-image: url(assets/FortStreamGameplay.png);
+    background-size: cover;
+    background-position: center;
+}
+#stream8{
+    background-image: url(assets/Warframegameplay.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#streams-btn{
+    position: relative;
+    top: 25px;
+    left: 450px;
+    width: 170px;
+    padding: 3px 20px;
+}
+
+#stream1{
+    grid-area: "1";
+}
+#stream2{
+    grid-area: "2";
+}
+#stream3{
+    grid-area: "3";
+}
+#stream4{
+    grid-area: "4";
+}
+
+#brawl-view{
+    left: 20px;
+}
+#brawl-name{
+    left: 110px;
+    width: 120px;
+}
+#mc-view{
+    left: 20px;
+}
+#mc-name{
+    left: 110px;
+    width: 120px;
+}
+#fort-view{
+    left: 30px;
+}
+#fort-name{
+    left: 120px;
+    width: 100px;
+}
+#warframe-view{
+    left: 20px;
+}
+#warframe-name{
+    left: 110px;
+    width: 130px;
+}
+
+#more-streams-btn{
+    position: relative;
+    top: 25px;
+    left: 470px;
+    width: 170px;
+    padding: 3px 20px;
+}
+
+
+/* Footer */
+#footer{
+    margin: 0;
+    padding: 40px 0;
+    background-color: var(--black);
+    text-align: center;
+}
+#footer p{
+    margin: 0;
+    color: white;
+}
+
+
+
+
+@media only screen and (max-width: 1399px){
+    .main-inner{
+        width: 1000px;
+    }
+    .header-mg{
+        width: 1140px;
+    }
+
+    .slider-container{
+        width: 600px;
+    }
+    .fav-pic{
+        width: 180px;
+    } 
+
+    #streams{
+        height: 500px;
+    }
+    .slider{
+        gap: 30px;
+    }
+    .fav-pic{
+        width: 180px;
+        height: 310px;
+    }
+
+    .stream-pic{
+        height: 200px;
+        width: 200px;
+    }
+    .stream-head{
+        font-size: 20px;
+    }
+
+    .live{
+        left: 150px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 110px;
+        left: 110px;
+    }
+    .views{
+        top: 140px;
+        left: 10px;
+    }
+
+    #brawl-view{
+        left: 45px;
+        top: 90px;
+    }
+    #brawl-name{
+        left: 30px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 45px;
+        top: 90px;
+    }
+    #mc-name{
+        left: 30px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 45px;
+        top: 90px;
+    }
+    #fort-name{
+        left: 40px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 45px;
+        top: 90px;
+    }
+    #warframe-name{
+        left: 30px;
+        width: 130px;
+    }
+
+    #more-streams-btn{
+        left: 390px;
+    }
+
+}
+@media only screen and (max-width: 1199px){
+    .search input{
+        font-size: 14px;
+        width: 140px;
+    }
+    
+
+    .main-inner{
+        width: 800px;
+    }
+    .header-mg{
+        width: 935px;
+    }
+    .main-img{
+        background-position-y: -10px;
+    }
+
+    #streams{
+        height: 550px;
+    }
+    .top-game{
+        display: grid;
+        grid-template-areas: "num pic check name"
+                             "follow follow follow follow";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .stream-pfp{
+        grid-area: pic;
+    }
+    #follow-btn{
+        grid-area: follow;
+        margin-left: auto;
+    }
+
+    .fav-game{
+        width: 100%;
+    }
+    .slider-container{
+        width: 500px;
+    }
+    .fav-pic{
+        width: 220px;
+        height: 380px;
+    }
+
+    .stream-pic{
+        width: 150px;
+        height: 150px;
+    }
+
+    .live{
+        left: 100px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 65px;
+        left: 30px;
+    }
+    .views{
+        top: 60px;
+        left: 30px;
+    }
+
+    #brawl-view{
+        left: 30px;
+        top: 60px;
+    }
+    #brawl-name{
+        left: 15px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 30px;
+        top: 60px;
+    }
+    #mc-name{
+        left: 15px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 30px;
+        top: 60px;
+    }
+    #fort-name{
+        left: 25px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 35px;
+        top: 60px;
+    }
+    #warframe-name{
+        left: 15px;
+        width: 130px;
+    }
+
+    #more-streams-btn{
+        left: 300px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .header{
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(245, 245, 245);
+    }
+    .header-mg{
+        width: 96%;
+    }
+    .logoBox{
+        border-right: none;
+    }
+    .search{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+
+
+    .burger-nav{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        width: 96%;
+        height: auto;
+        top: -180px;
+        left: 20px;
+        transition: 300ms;
+        background-color: white;
+    }
+    .burger-nav.active{
+        top: 110px;
+    }
+    .nav-line{
+        display: flex;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgb(231, 231, 231);
+    }
+    .profile-box{
+        display: flex;
+        height: 55px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-box{
+        border-radius: 28px;
+    }
+    .nav-txt{
+        color: black;
+        text-decoration: none;
+    }
+    .profile-box.burger-this{
+        color: white;
+        background-color: var(--pink);
+    }
+    .profile-box.burger-this > .nav-txt{
+        color: white;
+    }
+    .nav-txt.burger-this{
+        color: var(--pink);
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(12px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .main{
+        padding-top: 140px;
+    }
+    #popular-btn{
+        z-index: 0;
+    }
+
+    .library-game{
+        display: grid;
+        grid-template-areas: "pic name"
+                             "pic type"
+                             "added played"
+                             "date hours"
+                             "currently btn"
+                             "state btn";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    #more-streams-btn{
+        left: 280px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+
+    .main-inner{
+        width: 580px;
+    }
+
+    .main-img{
+        background-position-y: -0px;
+        background-position-x: -40px;
+    }
+
+    .header-container{
+        display: grid;
+    }
+    .header-img{
+        height: 480px;
+        width: 580px;
+    }
+
+    .stats-container{
+        display: grid;
+    }
+
+    .fort-imgs-cont{
+        display: grid;
+    }
+    .fort-img{
+        width: 520px;
+        height: 380px;
+    }
+    #fort-img1{
+        background-position-x: 0;
+    }
+
+    .related-games-cont{
+        display: block;
+    }
+
+    .game-img{
+        height: 90px;
+        width: 110px;
+    }
+
+    .streams-top-box{
+        display: grid;
+    }
+
+    .slider-container{
+        width: 540px;
+    }
+    .fav-pic{
+        width: 240px;
+    }
+
+    #top-games{
+        width: 540px;
+    }
+
+    .top-game{
+        display: flex;
+    }
+
+    .popular-streams-cont{
+        grid-template-areas: "1 2"
+                             "3 4"
+                             "5 6"
+                             "7 8";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    
+    .stream-pic{
+        width: 230px;
+        height: 230px;
+    }
+
+    .live{
+        left: 170px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 130px;
+        left: 130px;
+    }
+    .views{
+        top: 160px;
+        left: 30px;
+    }
+
+    
+    #brawl-view{
+        left: 10px;
+        top: 160px;
+    }
+    #brawl-name{
+        left: 110px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 10px;
+        top: 160px;
+    }
+    #mc-name{
+        left: 110px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 10px;
+        top: 160px;
+    }
+    #fort-name{
+        left: 110px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 10px;
+        top: 160px;
+    }
+    #warframe-name{
+        left: 100px;
+        width: 130px;
+    }
+
+    
+    #more-streams-btn{
+        left: 180px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .burger-nav{
+        width: 73vw;
+        left: 13.5vw;
+    }
+
+    .main-inner{
+        width: 470px;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+
+    .main-img h3{
+        text-align: center;
+    }
+    .main-img p{
+        text-align: center;
+    }
+    .main-img .btn{
+        margin: 0 auto;
+    }
+
+    #streams{
+        width: 430px;
+    }
+    .slider-container{
+        width: 430px;
+    }
+    .fav-pic{
+        width: 200px;
+    }
+
+    #top-games{
+        width: 430px;
+    }
+    .top-game{
+        display: grid;
+        grid-template-areas: "num pic check name gap"
+                             "follow follow follow follow follow";
+        grid-template-columns: 1fr 1fr auto 1fr 4fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #follow-btn{
+        width: 100%;
+    }
+
+    .stream-pic{
+        width: 180px;
+        height: 180px;
+    }
+    .stream-head{
+        font-size: 18px;
+    }
+
+    .live{
+        left: 130px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 90px;
+        left: 100px;
+    }
+    .views{
+        top: 120px;
+        left: 0px;
+    }
+
+
+    #brawl-view{
+        left: 45px;
+        top: 80px;
+    }
+    #brawl-name{
+        left: 30px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 45px;
+        top: 80px;
+    }
+    #mc-name{
+        left: 30px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 45px;
+        top: 80px;
+    }
+    #fort-name{
+        left: 35px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 50px;
+        top: 80px;
+    }
+    #warframe-name{
+        left: 30px;
+        width: 130px;
+    }
+
+    #more-streams-btn{
+        left: 120px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .burger-nav{
+        width: 97vw;
+        left: 1.5vw;
+    }
+
+    .main-inner{
+        width: 86%;
+        padding: 30px;
+    }
+
+    .main-img{
+        padding: 13%;
+    }
+
+    .header-img{
+        width: 86vw;
+        height: 380px;
+    }
+    .header-vid{
+        width: 86vw;
+        height: 40vw;
+    }
+
+    #streams{
+        height: 890px;
+    }
+    .fav-pic{
+        width: 430px;
+        height: 700px;
+    }
+
+    #top-games{
+        width: 76vw;
+    }
+
+    .popular-streams-cont{
+        display: block;
+    }
+    .stream-pic{
+        width: 75vw;
+        height: 75vw;
+    }
+    .stream-head{
+        font-size: 20px;
+    }
+
+    .live{
+        left: 310px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 280px;
+        left: 250px;
+    }
+    .views{
+        top: 310px;
+        left: 90px;
+    }
+
+
+    #brawl-view{
+        left: 90px;
+        top: 310px;
+    }
+    #brawl-name{
+        left: 230px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 90px;
+        top: 310px;
+    }
+    #mc-name{
+        left: 230px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 90px;
+        top: 310px;
+    }
+    #fort-name{
+        left: 230px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 90px;
+        top: 310px;
+    }
+    #warframe-name{
+        left: 230px;
+        width: 130px;
+    }
+
+    #more-streams-btn{
+        left: 30%;
+    }
+    
+}
+
+@media only screen and (max-width: 533px){
+    #streams{
+        height: 800px;
+        width: 400px;
+    }
+    .slider-container{
+        width: 390px;
+    }
+    .fav-pic{
+        width: 390px;
+        height: 600px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    #streams{
+        height: 770px;
+        width: 350px;
+    }
+    .slider-container{
+        width: 340px;
+    }
+    .fav-pic{
+        width: 340px;
+        height: 580px;
+    }
+
+}
+
+@media only screen and (max-width: 495px){
+    .main-inner{
+        width: 84%;
+    }
+
+    .fort-img{
+        width: 72vw;
+        height: 53vw;
+    }
+
+    .stream-pic{
+        width: 67vw;
+        height: 67vw;
+    }
+
+    .live{
+        left: 240px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 200px;
+        left: 190px;
+    }
+    .views{
+        top: 230px;
+        left: 60px;
+    }
+
+    #brawl-view{
+        left: 40px;
+        top: 230px;
+    }
+    #brawl-name{
+        left: 160px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 40px;
+        top: 230px;
+    }
+    #mc-name{
+        left: 160px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 40px;
+        top: 230px;
+    }
+    #fort-name{
+        left: 160px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 40px;
+        top: 230px;
+    }
+    #warframe-name{
+        left: 160px;
+        width: 130px;
+    }
+
+    #more-streams-btn{
+        left: 25%;
+    }
+    
+}
+
+@media only screen and (max-width: 479px){
+    .library-game{
+        column-gap: 35px;
+        padding: 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 461px){
+    #streams{
+        height: 680px;
+        width: 280px;
+    }
+    .slider-container{
+        width: 280px;
+    }
+    .fav-pic{
+        width: 280px;
+        height: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 445px){
+    .main-img{
+        height: 320px;
+    }
+
+    .all-stats{
+        gap: 10vw;
+    }
+    .stat-cont > i{
+        font-size: 4vw;
+    }
+    .stat-cont > p{
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 435px){
+    .main-inner{
+        width: 80%;
+    }
+    
+    .main-img{
+        height: 270px;
+    }
+    .main-img h3{
+        font-size: 16px;
+    }
+    .main-img > p{
+        font-size: 30px;
+    }
+
+    .header-img{
+        width: 80vw;
+    }
+    .header-vid{
+        width: 80vw;
+    }
+
+    .fort-img{
+        width: 66vw;
+        height: 42vw;
+    }
+
+    #top-games{
+        width: 65vw;
+    }
+
+    #more-streams-btn{
+        left: 22%;
+    }
+
+}
+
+@media only screen and (max-width: 431px){
+    .live{
+        left: 180px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 150px;
+        left: 140px;
+    }
+    .views{
+        top: 180px;
+        left: 30px;
+    }
+
+    #brawl-view{
+        left: 10px;
+        top: 180px;
+    }
+    #brawl-name{
+        left: 110px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 10px;
+        top: 180px;
+    }
+    #mc-name{
+        left: 110px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 10px;
+        top: 180px;
+    }
+    #fort-name{
+        left: 110px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 10px;
+        top: 180px;
+    }
+    #warframe-name{
+        left: 110px;
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    #more-streams-btn{
+        left: 17%;
+    }
+}
+
+@media only screen and (max-width: 396px){
+    #library{
+        padding: 5px 10px;
+    }
+    .library-game{
+        padding: 20px 0;
+    }
+
+    #top-games h2{
+        font-size: 25px;
+    }
+
+    .stream-pic{
+        width: 63vw;
+        height: 63vw;
+    }
+}
+
+@media only screen and (max-width: 383px){
+    #controler h2{
+        font-size: 25px;
+    }
+    #streams{
+        height: 600px;
+        width: 220px;
+    }
+    .slider-container{
+        width: 220px;
+    }
+    .fav-pic{
+        width: 220px;
+        height: 450px;
+    }
+
+    #more-streams-btn{
+        left: 13%;
+    }
+}
+
+@media only screen and (max-width: 377px){
+    .live{
+        left: 160px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 120px;
+        left: 130px;
+    }
+    .views{
+        top: 150px;
+        left: 20px;
+    }
+
+
+    #brawl-view{
+        left: 70px;
+        top: 110px;
+    }
+    #brawl-name{
+        left: 55px;
+        top: 120px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 70px;
+        top: 110px;
+    }
+    #mc-name{
+        left: 55px;
+        top: 120px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 70px;
+        top: 110px;
+    }
+    #fort-name{
+        left: 65px;
+        top: 120px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 70px;
+        top: 110px;
+    }
+    #warframe-name{
+        left: 45px;
+        top: 120px;
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 346px){
+    .library-game p{
+        font-size: 14px;
+    }
+
+    #more-streams-btn{
+        left: 2%;
+    }
+}
+
+@media only screen and (max-width: 341px){
+    .main-inner{
+        width: 76%;
+    }
+
+    .fort-img{
+        width: 58vw;
+        height: 36vw;
+    }
+
+    .stream-pic{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .live{
+        left: 120px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 90px;
+        left: 100px;
+    }
+    .views{
+        top: 120px;
+        left: 10px;
+    }
+
+
+    #brawl-view{
+        left: 50px;
+        top: 80px;
+    }
+    #brawl-name{
+        left: 35px;
+        top: 90px;
+        width: 120px;
+    }
+    #mc-view{
+        left: 50px;
+        top: 80px;
+    }
+    #mc-name{
+        left: 35px;
+        top: 90px;
+        width: 120px;
+    }
+    #fort-view{
+        left: 50px;
+        top: 80px;
+    }
+    #fort-name{
+        left: 40px;
+        top: 90px;
+        width: 100px;
+    }
+    #warframe-view{
+        left: 50px;
+        top: 80px;
+    }
+    #warframe-name{
+        left: 25px;
+        top: 90px;
+        width: 130px;
+    }
+
+
+    #more-streams-btn{
+        left: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 336px){
+    .live{
+        left: 130px;
+        top: 5px;
+    }
+    .stream-game{
+        top: 100px;
+        left: 100px;
+    }
+    .views{
+        top: 130px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width : 327px){
+    .main-img{
+        height: 290px;
+    }
+}

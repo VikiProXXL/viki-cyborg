@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  minimum-scale=1">
+    <link rel="stylesheet" href="details.css">
+    <title>Details</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- font awesome-->
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-mg">
+            <div class="logoBox">
+                <a href="home.html">
+                    <img src="assets/Cyborg Logo Borderless.png" alt="Logo">
+                </a>
+            </div>
+            <div class="search">
+                <img src="assets/Search Logo.png" alt="Search">
+                <input type="text" placeholder="Search Something" >
+            </div>
+            <div class="nav">
+                <a href="home.html">Home</a>
+                <a href="browse.html">Browse</a>
+                <a href="details.html" class="this">Details</a>
+                <a href="streaming.html">Streaming</a>     
+                    <div class="profileBox" id="browse-profile">
+                        <p>Profile</p>
+                        <img src="assets/Profile Logo.png" alt="Profile pic">
+                    </div>
+            </div>
+
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="burger-nav">
+        <div class="nav-line">
+            <a href="home.html" class="nav-txt">Home</a>
+        </div>
+        <div class="nav-line">
+            <a href="browse.html" class="nav-txt">Browse</a>
+        </div>
+        <div class="nav-line">
+            <a href="details.html" class="nav-txt burger-this">Details</a>
+        </div>
+        <div class="nav-line">
+            <a href="streaming.html" class="nav-txt">Streams</a>
+        </div>
+        <div class="nav-line">
+            <!-- BURGER-THIS MORA ICI U PROFILE-BOX DA BI RADILO -->
+            <div class="profile-box">
+                <a href="profile.html" class="nav-txt">Profile</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="main-inner">
+            <div class="header-container">
+                <div class="header-img">
+
+                </div>
+                <div class="header-vid">
+                    <a class="play-btn-link" href="https://www.youtube.com/">
+                        <div class="play-btn">
+                            <i class="fa-solid fa-play" style="color: #ec6090;"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2 id="fort-head">FORTNITE DETAILS</h2>
+            <div class="fort-details">
+                <div class="stats-container">
+                    <div class="name-stats">
+                        <p id="stats-name">Fortnite</p>
+                        <p id="stats-rating"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                        <p id="stats-type">Battle Royale</p>
+                        <p id="stats-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8</p>
+                    </div>
+                    <div class="all-stats">
+                        <div class="stat-cont">
+                            <i class="fa-solid fa-star" style="color: yellow;"></i>
+                            <p>4.8</p>
+                        </div>
+                        <div class="stat-cont">
+                            <i class="fa-solid fa-download" style="color: #ec6090;"></i>
+                            <p>4.8</p>
+                        </div>
+                        <div class="stat-cont">
+                            <i class="fa-solid fa-server" style="color: #ec6090;"></i>
+                            <p>4.8</p>
+                        </div>
+                        <div class="stat-cont">
+                            <i class="fa-solid fa-gamepad" style="color: #ec6090;"></i>
+                            <p>Action</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fort-imgs-cont">
+                    <div id="fort-img1" class="fort-img">
+
+                    </div>
+                    <div id="fort-img2" class="fort-img">
+                        
+                    </div>
+                    <div id="fort-img3" class="fort-img">
+                        
+                    </div>
+                </div>
+
+                <p id="fort-text">Cyborg Gaming is free HTML CSS website template provided by TemplateMo. 
+                    This is Bootstrap v5.2.0 layout. 
+                    You can make a <a id="PayPal-link" href="https://www.paypal.com/home">small contribution via PayPal</a> to info [at] templatemo.com and thank you for supporting.
+                    If you want to get the PSD source files, please contact us. 
+                    Lorem ipsum dolor sit consectetur es dispic dipiscingei elit, sed doers eiusmod lisum hored tempor.</p>
+
+                    <div id="fort-btn" class="border-btn">
+                        <a class="btnText">Download Fortnite Now!</a>
+                    </div>
+            </div>
+
+            <div class="related-games">
+                <h2> <em> Other related</em> Games </h2>
+                <div class="related-games-cont">
+                    <div class="game-cont">
+                        <div id="dota2" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">Dota2</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">MOBA</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                    <div class="game-cont">
+                        <div id="pubg" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">PUBG</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">Battle Royale</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                    <div class="game-cont">
+                        <div id="brawl" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">Brawlhalla</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">Fighting</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                    <div class="game-cont">
+                        <div id="minecraft" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">Minecraft</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">Survival</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                    <div class="game-cont">
+                        <div id="cs2" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">Counter Strike 2</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">Shooter</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                    <div class="game-cont">
+                        <div id="warcraft" class="game-img"></div>
+                        <div class="related-stats">
+                            <p id="related-name">Warcraft</p>
+                            <p id="favorite-star"><i class="fa-solid fa-star" style="color: yellow;"></i>4.8</p>
+                            <p id="related-type">MMO RPG</p>
+                            <p id="favorite-download"><i class="fa-solid fa-download" style="color: #ec6090;"></i>4.8M</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <p>Copyright © 2036 Cyborg Gaming Company. All rights reserved.</p>
+        <br>
+        <p>By: Viki</p>
+    </div>
+
+    <script>
+        // Links
+        function MoveToProfile(){
+            window.location.href = "profile.html";
+        }
+        
+
+        document.getElementById("browse-profile").addEventListener("click", MoveToProfile)
+
+        // Burger
+        var burgerNav = document.querySelector(".burger-nav");
+        var burger = document.querySelector(".burger");
+        burger.addEventListener("click", function(){
+            burger.classList.toggle("active");
+            burgerNav.classList.toggle("active");
+        })
+    </script>
+</body>
+</html>

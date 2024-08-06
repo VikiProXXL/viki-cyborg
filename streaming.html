@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  minimum-scale=1">
+    <link rel="stylesheet" href="streaming.css">
+    <title>Streaming</title>
+
+    <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- font awesome-->
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-mg">
+            <div class="logoBox">
+                <a href="home.html">
+                    <img src="assets/Cyborg Logo Borderless.png" alt="Logo">
+                </a>
+            </div>
+            <div class="search">
+                <img src="assets/Search Logo.png" alt="Search">
+                <input type="text" placeholder="Search Something" >
+            </div>
+            <div class="nav">
+                <a href="home.html">Home</a>
+                <a href="browse.html">Browse</a>
+                <a href="details.html">Details</a>
+                <a href="streaming.html" class="this">Streaming</a>     
+                    <div class="profileBox" id="browse-profile">
+                        <p>Profile</p>
+                        <img src="assets/Profile Logo.png" alt="Profile pic">
+                    </div>
+            </div>
+
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="burger-nav">
+        <div class="nav-line">
+            <a href="home.html" class="nav-txt">Home</a>
+        </div>
+        <div class="nav-line">
+            <a href="browse.html" class="nav-txt">Browse</a>
+        </div>
+        <div class="nav-line">
+            <a href="details.html" class="nav-txt">Details</a>
+        </div>
+        <div class="nav-line">
+            <a href="streaming.html" class="nav-txt burger-this">Streams</a>
+        </div>
+        <div class="nav-line">
+            <!-- BURGER-THIS MORA ICI U PROFILE-BOX DA BI RADILO -->
+            <div class="profile-box">
+                <a href="profile.html" class="nav-txt">Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="main-inner">
+            <div class="streams-top-box">
+                <div id="streams">
+                    <div class="slider-wrapper">
+                        <div id="controler">
+                            <h2> <em> Live</em> Streams </h2>
+                            <div class="controls">
+                                <button id="arrowL">
+                                    <!--<img src="assets/ArrowL.png" class="arrowG" id="arrowLG">-->
+                                    <i id="iconL" class="fa-solid fa-angle-left" ></i>
+                                    <!--<img src="assets/ArrowLpink.png" class="arrowP" id="arrowLP"> -->  
+                                </button>
+                                <button id="arrowR">
+                                    <!--<img src="assets/ArrowR.png" class="arrowG" id="arrowRG">-->
+                                    <i id="iconR" class="arrowG fa-solid fa-angle-right"></i>
+                                    <!--<img src="assets/ArrowRpink.png" class="arrowP" id="arrowRP"> -->  
+                                </button>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="slider-container">
+                            <div class="slider">
+                                <div id="fav-game1" class="fav-game">
+                                    <div class="slide">
+                                        <div class="fav-pic">
+                                            <div class="pic-div">
+                                                <p>111 Streaming</p>
+                                            </div>
+                                        </div>
+                                        <div class="stats">
+                                            <p class="name">PUBG</p>
+                                            <div><p class="rating"> <img src="assets/Star.png"> 4.8</p></div>
+                                            <p class="downs">245K Downloads</p>
+                                            <div><p class="downloads"> <img src="assets/Download.png" > 2.3M</p></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div id="fav-game2" class="fav-game">
+                                    <div class="game-prop">
+                                        <div class="fav-pic">
+                                            <div class="pic-div">
+                                                <p>222 Streaming</p>
+                                            </div>
+                                        </div>
+                                        <div class="stats">
+                                            <p class="name">Minecraft</p>
+                                            <div><p class="rating"> <img src="assets/Star.png"> 4.8</p></div>
+                                            <p class="downs">24K Downloads</p>
+                                            <div><p class="downloads"> <img src="assets/Download.png" > 2.3M</p></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div id="fav-game3" class="fav-game">
+                                    <div class="game-prop">
+                                        <div class="fav-pic">
+                                            <div class="pic-div">
+                                                <p>333 Streaming</p>
+                                            </div>
+                                        </div>
+                                        <div class="stats">
+                                            <p class="name">CS2</p>
+                                            <div><p class="rating"> <img src="assets/Star.png"> 4.8</p></div>
+                                            <p class="downs">245K Downloads</p>
+                                            <div><p class="downloads"> <img src="assets/Download.png" > 2.3M</p></div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                
+                                <div id="fav-game4" class="fav-game">
+                                    <div class="game-prop">
+                                        <div class="fav-pic">
+                                            <div class="pic-div">
+                                                <p>444 Streaming</p>
+                                            </div>
+                                        </div>
+                                        <div class="stats">
+                                            <p class="name">Dota 2</p>
+                                            <div><p class="rating"> <img src="assets/Star.png"> 4.8</p></div>
+                                            <p class="downs">245K Downloads</p>
+                                            <div><p class="downloads"> <img src="assets/Download.png" > 2.3M</p></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                
+                                <div id="fav-game5" class="fav-game">
+                                    <div class="game-prop">
+                                        <div class="fav-pic">
+                                            <div class="pic-div">
+                                                <p>555 Streaming</p>
+                                            </div>
+                                        </div>
+                                        <div class="stats">
+                                            <p class="name">Fortnite</p>
+                                            <div><p class="rating"> <img src="assets/Star.png"> 4.8</p></div>
+                                            <p class="downs">245K Downloads</p>
+                                            <div><p class="downloads"> <img src="assets/Download.png" > 2.3M</p></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                
+                <div id="top-games">
+                    <h2> <em>Top</em> Streamers </h2>
+                    <div class="top-game" id="fort">
+                        <p class="num">01</p>
+                        <img class="stream-pfp" src="assets/PubgPFP.png" alt="">
+                        <img class="checkmark" src="assets/Checkmark.png" alt="">
+                        <p class="streamer-name">KenganC</p>
+                        <div id="follow-btn">
+                            <p class="btnTxt">Follow</p>
+                        </div>
+                    </div>
+                    <div class="top-game" id="fort">
+                        <p class="num">02</p>
+                        <img class="stream-pfp" src="assets/DotaPfp.png" alt="">
+                        <img class="checkmark" src="assets/Checkmark.png" alt="">
+                        <p class="streamer-name">LunaMa</p>
+                        <div id="follow-btn">
+                            <p class="btnTxt">Follow</p>
+                        </div>
+                    </div>
+                    <div class="top-game" id="fort">
+                        <p class="num">03</p>
+                        <img class="stream-pfp" src="assets/CSpfp.png" alt="">
+                        <img class="checkmark" src="assets/Checkmark.png" alt="">
+                        <p class="streamer-name">Areluwa</p>
+                        <div id="follow-btn">
+                            <p class="btnTxt">Follow</p>
+                        </div>
+                    </div>
+                    <div class="top-game" id="fort">
+                        <p class="num">04</p>
+                        <img class="stream-pfp" src="assets/WOWpfp.png" alt="">
+                        <img class="checkmark" src="assets/Checkmark.png" alt="">
+                        <p class="streamer-name">GangTm</p>
+                        <div id="follow-btn">
+                            <p class="btnTxt">Follow</p>
+                        </div>
+                    </div>
+                    <div class="top-game" id="fort">
+                        <p class="num">05</p>
+                        <img class="stream-pfp" src="assets/Brawlpfp.png" alt="">
+                        <img class="checkmark" src="assets/Checkmark.png" alt="">
+                        <p class="streamer-name">Omeg</p>
+                        <div id="follow-btn">
+                            <p class="btnTxt">Follow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-streams">
+                <h2> <em>Most Popular</em> Live Streams</h2>
+                <div class="popular-streams-cont">
+                    <div class="stream">
+                        <div class="stream-pic" id="stream1">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">PUBG</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/PubgPFP.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>KenganC</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream2">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">Dota2</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/DotaPfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>LunaMa</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream3">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">CS2</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/CSpfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>Areluwa</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream4">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">WoW</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/WOWpfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>GangTm</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream5">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div id="brawl-view" class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div id="brawl-name" class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">Brawlhalla</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/Brawlpfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>Omeg</p>
+                            </div>
+                            <p class="stream-head">Road To Diamond</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream6">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div id="mc-view" class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div id="mc-name" class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">Minecraft</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/Mcpfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>LahutaMalc</p>
+                            </div>
+                            <p class="stream-head">New Survival World</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream7">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div id="fort-view" class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div id="fort-name" class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">Fortnite</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/Fortpfp.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>Nexxy</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+
+                    <div class="stream">
+                        <div class="stream-pic" id="stream8">
+                            <div class="stream-btn-live live">
+                                <p class="btnTxt">Live</p>
+                            </div>
+                            <div id="warframe-view" class="stream-btn views">
+                                <img src="assets/EyeIcon.png" alt="">
+                                <p class="btnTxt">1.2K</p>
+                            </div>
+                            <div id="warframe-name" class="stream-btn stream-game">
+                                <img src="assets/Controler.png" alt="">
+                                <p class="btnTxt">Warframe</p>
+                            </div>
+                        </div>
+                        <div class="stream-about">
+                            <img src="assets/WarframePFP.png" class="stream-pfp">
+                            <div class="streamer-name">
+                                <img src="assets/Checkmark.png">
+                                <p>WarDemon</p>
+                            </div>
+                            <p class="stream-head">Streaming Until I <br> Win</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn" id="more-streams-btn">
+                    <p class="btnTxt">Load More Streams</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Copyright © 2036 Cyborg Gaming Company. All rights reserved.</p>
+        <br>
+        <p>By: Viki</p>
+    </div>
+
+    <script>
+        // Links
+        function MoveToProfile(){
+            window.location.href = "profile.html";
+        }
+        function MoveToStreams(){
+            window.location.href = "streaming.html";
+        }
+
+        document.getElementById("browse-profile").addEventListener("click", MoveToProfile)
+        document.getElementById("more-streams-btn").addEventListener("click", MoveToStreams)
+
+
+        //Slider fucionality
+        const container = document.querySelector(".slider-wrapper");
+        const slider = document.querySelector(".slider");
+        const nextBtn = document.getElementById("arrowR");
+        const prevBtn = document.getElementById("arrowL");
+        const interval = 3000;
+
+        const thirdCard = document.getElementById("fav-game3");
+
+        let slides = document.querySelectorAll(".fav-game");
+        let index = 1;
+        let slideId;
+
+        /*let isDown = false;
+        let startX;
+        let scrollLeft;*/
+
+        const firstClone = slides[0].cloneNode(true);
+        const secondClone = slides[1].cloneNode(true);
+        const thirdClone = slides[2].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+
+        console.log(container);
+        console.log(slider);
+        console.log(nextBtn);
+        console.log(prevBtn);
+        console.log(interval);
+        console.log(thirdCard);
+        console.log(slides);
+
+
+        firstClone.id = "first-clone";
+        lastClone.id = "last-clone";
+
+        slider.append(firstClone);
+        slider.append(secondClone);
+        slider.append(thirdClone);
+        slider.prepend(lastClone);
+
+        const slideWidth = slides[index].clientWidth;
+
+        slider.style.transform = `translateX(${(-slideWidth * index) - 30}px)`;
+
+        //Auto Scroll
+        const startSlide = ()=>{
+            /*slideId = setInterval(() => {
+                moveNextSlide();
+            }, interval);*/
+        }
+
+        // Burger
+        var burgerNav = document.querySelector(".burger-nav");
+        var burger = document.querySelector(".burger");
+        burger.addEventListener("click", function(){
+            burger.classList.toggle("active");
+            burgerNav.classList.toggle("active");
+        })
+
+        slider.addEventListener("transitionend", () => {
+            slides = document.querySelectorAll(".fav-game");
+            if(slides[index].id === firstClone.id){
+                slider.style.transition = "none";
+                index = 1;
+                slider.style.transform = `translateX(${(-slideWidth * index) - 30}px)`;
+            }
+            if(slides[index].id === lastClone.id){
+                slider.style.transition = "none";
+                index = slides.length - 4;
+                slider.style.transform = `translateX(${(-slideWidth * index) - 150}px)`;
+            }
+        });
+
+        //On Buttons
+        const moveNextSlide = ()=>{
+            slides = document.querySelectorAll(".fav-game");
+            if(index >= slides.length - 3) return
+            index++;
+            slider.style.transform = `translateX(${(-slideWidth * index) - (30 * index) }px)`;
+            slider.style.transition = ".7s";
+        }
+        const movePrevSlide = ()=>{
+            slides = document.querySelectorAll(".fav-game");
+            if(index <= 0) return
+            index--;
+            slider.style.transform = `translateX(${(-slideWidth * index) - (30 * index) }px)`;
+            slider.style.transition = ".7s";
+        }
+
+        //Stop Scroll
+        container.addEventListener("mouseenter", ()=>{
+            clearInterval(slideId);
+        })
+        container.addEventListener("mouseleave", startSlide);
+
+        nextBtn.addEventListener("click", moveNextSlide);
+        prevBtn.addEventListener("click", movePrevSlide);
+
+        startSlide();
+        
+    </script>
+
+</body>
+</html>
